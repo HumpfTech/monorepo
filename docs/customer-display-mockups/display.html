@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light" />
+		<title>Customer display concept — WCPOS</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="display-body">
+		<div class="display-shell">
+			<header class="display-topbar">
+				<a class="display-brand" href="index.html">
+					<span class="brand-dot" aria-hidden="true"></span>
+					<span>Northstar Market</span>
+				</a>
+				<span class="display-concept-label">Future presentation concept</span>
+				<nav class="display-state-nav" aria-label="Concept display states">
+					<a href="display.html?state=cart" data-state-link="cart">Cart</a>
+					<a href="display.html?state=awaiting-payment" data-state-link="awaiting-payment">
+						Awaiting payment
+					</a>
+					<a href="display.html?state=idle" data-state-link="idle">Idle</a>
+				</nav>
+			</header>
+
+			<main class="display-main" data-state-view="cart" hidden>
+				<section class="item-panel" aria-label="Cart items">
+					<header class="panel-heading">
+						<h1>Your order</h1>
+						<span>4 items</span>
+					</header>
+					<div class="items-list">
+						<article class="line-item">
+							<div class="product-image" aria-hidden="true">◒</div>
+							<div class="line-copy">
+								<h2>Stoneground sourdough</h2>
+								<p>1 × $8.50</p>
+							</div>
+							<div class="line-total">$8.50</div>
+						</article>
+						<article class="line-item">
+							<div class="product-image bottle" aria-hidden="true">♧</div>
+							<div class="line-copy">
+								<h2>Cold-pressed apple juice</h2>
+								<p>2 × $4.25</p>
+							</div>
+							<div class="line-total">$8.50</div>
+						</article>
+						<article class="line-item">
+							<div class="product-image bag" aria-hidden="true">◇</div>
+							<div class="line-copy">
+								<h2>House blend coffee</h2>
+								<p>1 × $15.00</p>
+							</div>
+							<div class="line-total">$15.00</div>
+						</article>
+					</div>
+				</section>
+
+				<aside class="summary-panel" aria-label="Cart totals">
+					<div>
+						<p class="summary-eyebrow">Current cart</p>
+						<h2 class="summary-title">Everything look right?</h2>
+						<div class="totals-list">
+							<div class="total-row"><span>Subtotal</span><strong>$32.00</strong></div>
+							<div class="total-row discount"><span>Discount</span><strong>−$3.20</strong></div>
+							<div class="total-row"><span>Local delivery</span><strong>$4.00</strong></div>
+							<div class="total-row"><span>Service fee</span><strong>$1.25</strong></div>
+							<div class="total-row"><span>Tax</span><strong>$2.82</strong></div>
+						</div>
+						<div class="grand-total">
+							<span>Total</span>
+							<strong>$36.87</strong>
+						</div>
+					</div>
+					<p class="display-footer-note">
+						V1 supplies the cart data; branding and layout are future presentation concepts.
+					</p>
+				</aside>
+			</main>
+
+			<main class="display-main" data-state-view="awaiting-payment" hidden>
+				<section class="item-panel" aria-label="Checkout items">
+					<header class="panel-heading">
+						<h1>Your order</h1>
+						<span>4 items</span>
+					</header>
+					<div class="items-list">
+						<article class="line-item">
+							<div class="product-image" aria-hidden="true">◒</div>
+							<div class="line-copy">
+								<h2>Stoneground sourdough</h2>
+								<p>1 × $8.50</p>
+							</div>
+							<div class="line-total">$8.50</div>
+						</article>
+						<article class="line-item">
+							<div class="product-image bottle" aria-hidden="true">♧</div>
+							<div class="line-copy">
+								<h2>Cold-pressed apple juice</h2>
+								<p>2 × $4.25</p>
+							</div>
+							<div class="line-total">$8.50</div>
+						</article>
+						<article class="line-item">
+							<div class="product-image bag" aria-hidden="true">◇</div>
+							<div class="line-copy">
+								<h2>House blend coffee</h2>
+								<p>1 × $15.00</p>
+							</div>
+							<div class="line-total">$15.00</div>
+						</article>
+					</div>
+				</section>
+
+				<aside class="summary-panel" aria-label="Amount due">
+					<div>
+						<p class="summary-eyebrow">Awaiting payment</p>
+						<h2 class="summary-title">Ready when you are.</h2>
+						<div class="totals-list">
+							<div class="total-row"><span>Subtotal</span><strong>$32.00</strong></div>
+							<div class="total-row discount"><span>Discount</span><strong>−$3.20</strong></div>
+							<div class="total-row"><span>Delivery + fee</span><strong>$5.25</strong></div>
+							<div class="total-row"><span>Tax</span><strong>$2.82</strong></div>
+						</div>
+						<div class="grand-total">
+							<span>Amount due</span>
+							<strong>$36.87</strong>
+						</div>
+						<div class="payment-callout">
+							Please follow the cashier's instructions to complete payment.
+						</div>
+					</div>
+					<p class="display-footer-note">
+						V1 supplies the authoritative net total; this checkout layout is a future concept.
+					</p>
+				</aside>
+			</main>
+
+			<main class="idle-main" data-state-view="idle" hidden>
+				<div class="idle-orbit" aria-hidden="true"></div>
+				<div class="idle-copy">
+					<div class="idle-icon" aria-hidden="true">W</div>
+					<p class="summary-eyebrow">Northstar Market</p>
+					<h1>Welcome.</h1>
+					<p>We'll be with you shortly.</p>
+					<p class="idle-concept-note">
+						V1 supplies the idle state; branding and welcome copy are future concepts.
+					</p>
+				</div>
+			</main>
+		</div>
+		<script src="mockups.js"></script>
+	</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light" />
+		<title>Customer display settings concept — WCPOS</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="concept-banner">
+			<span aria-hidden="true">◇</span>
+			Follow-up design concept — customer-display settings are not implemented by PR #1125
+		</div>
+		<div class="app-shell">
+			<div class="global-sidebar" aria-label="WCPOS areas">
+				<a class="wcpos-mark" href="index.html" aria-label="Mockup gallery">W</a>
+				<span class="global-icon" aria-label="Point of sale">▦</span>
+				<span class="global-icon" aria-label="Products">□</span>
+				<span class="global-icon" aria-label="Orders">≡</span>
+				<span class="global-icon active" aria-label="Settings">⚙</span>
+			</div>
+
+			<div class="settings-rail" aria-label="Settings sections">
+				<h2 class="rail-title">Settings</h2>
+				<div class="rail-links">
+					<span class="rail-link">General</span>
+					<span class="rail-link">Tax</span>
+					<span class="rail-link">Printing</span>
+					<span class="rail-link">Barcode scanning</span>
+					<span class="rail-link">Theme</span>
+					<a class="rail-link active" href="settings.html">
+						Customer display <span class="mini-badge">Concept</span>
+					</a>
+				</div>
+			</div>
+
+			<main class="settings-main">
+				<div class="settings-page">
+					<header class="page-heading">
+						<div>
+							<h1>Customer display</h1>
+							<p>Choose how a connected screen presents the current sale.</p>
+						</div>
+						<span class="concept-pill">Future concept</span>
+					</header>
+
+					<section class="settings-section first">
+						<h2 class="section-kicker">Connection</h2>
+						<p class="section-description">
+							A production transport and session model will be selected in follow-up work.
+						</p>
+						<div class="setting-row">
+							<div class="setting-label">
+								Customer display
+								<small>Publish customer-safe cart snapshots to an approved screen.</small>
+							</div>
+							<div class="setting-control">
+								<button
+									class="switch on"
+									type="button"
+									role="switch"
+									aria-checked="true"
+									aria-label="Customer display"
+									data-mock-action
+									data-display-enabled
+								></button>
+							</div>
+						</div>
+
+						<div class="connected-card" data-display-dependent>
+							<div class="device-icon" aria-hidden="true">▣</div>
+							<div class="device-copy">
+								<strong>Counter display</strong>
+								<small>Concept connection • Last seen just now</small>
+							</div>
+							<span class="status-pill">● Connected</span>
+						</div>
+
+						<div class="action-row" data-display-dependent>
+							<p class="muted-copy">Only display-safe V1 fields would leave this POS session.</p>
+							<a class="button primary" href="pair-display.html">Add a display</a>
+						</div>
+					</section>
+
+					<section class="settings-section">
+						<h2 class="section-kicker">Layout</h2>
+						<p class="section-description">Preview-only presentation options for the future display app.</p>
+						<div class="choice-grid" role="radiogroup" aria-label="Display layout" data-choice-group>
+							<button class="choice-card selected" type="button" role="radio" aria-checked="true" tabindex="0">
+								<strong>Balanced</strong>
+								<small>Items and amount due share the screen.</small>
+							</button>
+							<button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="-1">
+								<strong>Item focused</strong>
+								<small>Larger photos and product information.</small>
+							</button>
+							<button class="choice-card" type="button" role="radio" aria-checked="false" tabindex="-1">
+								<strong>Compact</strong>
+								<small>More lines visible on smaller screens.</small>
+							</button>
+						</div>
+					</section>
+
+					<section class="settings-section">
+						<h2 class="section-kicker">Appearance</h2>
+						<div class="setting-row">
+							<div class="setting-label">
+								Show product images
+								<small>Images use the sanitized URL provided by the V1 snapshot.</small>
+							</div>
+							<div class="setting-control">
+								<button
+									class="switch on"
+									type="button"
+									role="switch"
+									aria-checked="true"
+									aria-label="Show product images"
+									data-mock-action
+								></button>
+							</div>
+						</div>
+						<div class="setting-row">
+							<label class="setting-label" for="idle-message">
+								Idle message
+								<small>Future display-app copy; not part of the V1 payload.</small>
+							</label>
+							<div class="setting-control">
+								<input
+									class="text-control"
+									id="idle-message"
+									value="Welcome — we'll be with you shortly"
+									data-mock-action
+								/>
+							</div>
+						</div>
+						<div class="setting-row">
+							<label class="setting-label" for="theme">
+								Display theme
+								<small>A high-contrast palette for viewing at a distance.</small>
+							</label>
+							<div class="setting-control">
+								<select class="select-control" id="theme" data-mock-action>
+									<option>Match WCPOS</option>
+									<option>Light</option>
+									<option>Dark</option>
+								</select>
+							</div>
+						</div>
+					</section>
+
+					<section class="settings-section">
+						<h2 class="section-kicker">Checkout</h2>
+						<p class="section-description">
+							These roadmap ideas require new protocol and UI work beyond PR #1125.
+						</p>
+						<div class="setting-row">
+							<div class="setting-label">
+								Thank-you screen
+								<small>Requires a future completed-payment state.</small>
+							</div>
+							<div class="setting-control">
+								<button
+									class="switch"
+									type="button"
+									role="switch"
+									aria-checked="false"
+									aria-label="Thank-you screen"
+									data-mock-action
+								></button>
+							</div>
+						</div>
+						<div class="setting-row">
+							<div class="setting-label">
+								Signature capture
+								<small>Requires separate security, consent, and transport design.</small>
+							</div>
+							<div class="setting-control">
+								<button
+									class="switch"
+									type="button"
+									role="switch"
+									aria-checked="false"
+									aria-label="Signature capture"
+									data-mock-action
+								></button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</main>
+		</div>
+		<div class="mock-toast" role="status" aria-live="polite" data-mock-toast></div>
+		<script src="mockups.js"></script>
+	</body>
+</html>

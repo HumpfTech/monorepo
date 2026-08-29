@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light" />
+		<title>Pair customer display concept — WCPOS</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="concept-banner">
+			<span aria-hidden="true">◇</span>
+			Follow-up design concept — pairing and transport are not implemented by PR #1125
+		</div>
+		<main class="pair-page">
+			<section class="pair-intro">
+				<a class="brand-line" href="index.html">
+					<span class="wcpos-mark">W</span>
+					WCPOS customer display
+				</a>
+
+				<div class="pair-intro-copy">
+					<p class="step-label" style="color: #8fc7f1">Future connection flow</p>
+					<h1>Share only the customer-facing cart view.</h1>
+					<p>
+						A display receives only the selected customer-safe cart projection. Pairing,
+						transport choice, authorization, and session expiry remain follow-up architecture.
+					</p>
+				</div>
+
+				<div class="privacy-note">
+					<span aria-hidden="true">⌾</span>
+					<span>
+						<strong>Privacy boundary</strong><br />
+						No customer identity, address, order ID, notes, coupon code, payment URL,
+						credentials, transaction data, or cost data is included in V1 snapshots.
+					</span>
+				</div>
+			</section>
+
+			<section class="pair-panel" aria-label="Pairing code concept">
+				<div class="pair-card">
+					<p class="step-label">Connection setup concept</p>
+					<h2>Pair a customer display</h2>
+					<p class="muted-copy">
+						On the customer screen, open the future WCPOS display app and enter this one-time
+						code.
+					</p>
+
+					<div class="pair-code" aria-label="Example connection code K7M 4Q2">K7M 4Q2</div>
+					<div class="pair-url">display.wcpos.com/connect</div>
+
+					<ol class="pair-steps">
+						<li><span>1</span>Open the display app on the customer-facing screen.</li>
+						<li><span>2</span>Enter the temporary code shown above.</li>
+						<li><span>3</span>Approve the screen name from this POS.</li>
+					</ol>
+
+					<div class="connection-status">
+						<div class="waiting"><span class="pulse"></span> Waiting for a display…</div>
+						<a class="button" href="settings.html">Back</a>
+					</div>
+					<p class="recovery-note">
+						If a future session expires or goes offline, the POS would show Disconnected and offer
+						a fresh connection code.
+					</p>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

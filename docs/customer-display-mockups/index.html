@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light" />
+		<title>WCPOS customer display concepts</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="gallery-body">
+		<main class="gallery">
+			<header class="gallery-header">
+				<div>
+					<span class="concept-pill">Design exploration</span>
+					<h1>Customer display concepts</h1>
+					<p>
+						A concrete follow-up vision for the transport-neutral customer-display snapshot in
+						PR #1125. The customer screens use only the V1 safe fields. Settings and pairing are
+						future concepts, not functionality in that pull request.
+					</p>
+				</div>
+				<a class="button" href="README.md">Read contract notes</a>
+			</header>
+
+			<section class="gallery-grid" aria-label="Mockup pages">
+				<article class="gallery-card">
+					<div class="card-icon" aria-hidden="true">⚙</div>
+					<h2>Settings</h2>
+					<p>
+						A WCPOS-native settings page for connection status, display layout, and optional
+						presentation choices. Every control is marked conceptual.
+					</p>
+					<div class="gallery-links">
+						<a class="button primary" href="settings.html">Open settings</a>
+					</div>
+				</article>
+
+				<article class="gallery-card">
+					<div class="card-icon" aria-hidden="true">▣</div>
+					<h2>Pair a display</h2>
+					<p>
+						A transport-neutral connection-code flow with clear privacy language and an
+						understandable waiting state.
+					</p>
+					<div class="gallery-links">
+						<a class="button primary" href="pair-display.html">Open pairing</a>
+					</div>
+				</article>
+
+				<article class="gallery-card wide">
+					<div class="card-icon" aria-hidden="true">◫</div>
+					<h2>Customer screen</h2>
+					<p>
+						Three route-selectable renderings of the implemented V1 states. Cart and checkout
+						show synthetic safe order data; idle clears it completely.
+					</p>
+					<div class="gallery-links">
+						<a class="button primary" href="display.html?state=cart">Cart</a>
+						<a class="button" href="display.html?state=awaiting-payment">Awaiting payment</a>
+						<a class="button" href="display.html?state=idle">Idle</a>
+					</div>
+				</article>
+			</section>
+
+			<aside class="scope-box">
+				<strong>Scope:</strong> PR #1125 publishes sanitized, replayable snapshots. It does not
+				implement this UI, a transport, pairing, saved display settings, signature capture,
+				receipts, or a completed-payment / thank-you state. Those remain separately reviewable
+				follow-up work.
+			</aside>
+		</main>
+	</body>
+</html>
